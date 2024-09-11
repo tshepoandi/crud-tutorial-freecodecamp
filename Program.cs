@@ -8,6 +8,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.Configure<DbSettings>(builder.Configuration.GetSection("DbSettings"));
 builder.Services.AddSingleton<ToDoDbContext>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 var app = builder.Build();
 
 {
